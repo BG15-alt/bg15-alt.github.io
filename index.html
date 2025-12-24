@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ma Vitrine Amazon – LAN</title>
+  <style>
+    /* === STYLE GLOBAL === */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #232f3e;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* === STYLE PAR DÉFAUT D’UN PRODUIT === */
+    .produit {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+    .produit:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Tu peux écraser ces styles par élément avec des classes ou style="" */
+    
+    /* === CLASSES UTILES (à adapter selon tes besoins) === */
+    .taille-petite img { width: 100px; height: auto; }
+    .taille-grande img { width: 250px; height: auto; }
+    .position-droite img { float: right; margin: 0 0 10px 15px; }
+    .position-centre img { display: block; margin: 0 auto 15px; }
+    .rotation-5 { transform: rotate(5deg); }
+    .ombre { box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🛒 Mes Produits Amazon Favoris</h1>
+    <p>Découvrez mes sélections testées et approuvées !</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- ============ PRODUIT 1 ============ -->
+    <div class="produit ombre">
+      <img src="https://m.media-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg" alt="Écouteurs Apple AirPods">
+      <h3>Apple AirPods (3e génération)</h3>
+      <p>Audio spatial, résistance à l’eau, son immersif.</p>
+      <a href="https://www.amazon.fr/dp/B09JQMJHXY?tag=tonid-21" target="_blank" style="color:#e47911; font-weight:bold; text-decoration:none;">
+        👉 Voir le prix sur Amazon
+      </a>
+    </div>
+
+    <!-- ============ PRODUIT 2 (avec vidéo) ============ -->
+    <div class="produit" style="text-align:center;">
+      <img src="https://m.media-amazon.com/images/I/61Jv0hGkKbL._AC_SX466_.jpg" alt="Lampe LED" class="position-centre">
+      <h3>Lampe de Bureau LED Réglable</h3>
+      <video controls width="100%" style="border-radius:8px; margin-top:10px;">
+        <source src="https://example.com/lampe-demo.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+      <a href="https://www.amazon.fr/dp/B08XYZ1234?tag=tonid-21" target="_blank" style="display:inline-block; margin-top:10px; color:#007bff;">
+        🔗 Acheter sur Amazon
+      </a>
+    </div>
+
+    <!-- ============ PRODUIT 3 (personnalisé en CSS direct) ============ -->
+    <div class="produit" style="background:#fff8e1; border-left:4px solid #ffc107; padding:20px;">
+      <img src="https://m.media-amazon.com/images/I/81dVr9ZuYbL._AC_SX466_.jpg" alt="Livre Python" style="width:180px; float:left; margin-right:15px;">
+      <h3>Apprendre Python en 7 jours</h3>
+      <p>Parfait pour débutants – exercices inclus.</p>
+      <a href="https://www.amazon.fr/dp/B09ABC5678?tag=tonid-21" target="_blank" style="color:#28a745;">
+        📘 Commander maintenant
+      </a>
+      <div style="clear:both;"></div>
+    </div>
+
+    <!-- ============ AJOUTE TON PROCHAIN PRODUIT ICI ============ -->
+
+  </div>
+
+</body>
+</html>
